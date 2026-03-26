@@ -1,0 +1,38 @@
+{
+  "scenario_id": "agent-checkpoint-resume.demo.v1",
+  "title": "AI agent checkpoint and resume - durable multi-step pipeline",
+  "description": "Agent processes a multi-step data pipeline. Each step is a durable intent. If the agent crashes, it resumes from the last completed step.",
+
+  "agents": [
+    {
+      "role": "pipeline_agent",
+      "address": "pipeline-agent-demo",
+      "display_name": "Data Pipeline Agent",
+      "delivery_mode": "stream",
+      "create_if_missing": true
+    }
+  ],
+
+  "workflow": {
+    "steps": [
+      {
+        "step_id": "run_pipeline",
+        "tool_id": "tool.agent.task.v1",
+        "assigned_to": "pipeline_agent",
+        "step_deadline_seconds": 120
+      }
+    ]
+  },
+
+  "intent": {
+    "type": "intent.pipeline.process.v1",
+    "payload": {
+      "pipeline": "etl-customers",
+      "source": "postgres-prod",
+      "destination": "bigquery-analytics",
+      "steps": ["extract", "validate", "transform", "load"],
+      "total_rows": 500000
+    },
+    "max_delivery_attempts": 3
+  }
+}

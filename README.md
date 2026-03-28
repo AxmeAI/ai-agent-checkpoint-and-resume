@@ -268,7 +268,7 @@ axme intents get <intent_id>
 ## Related
 
 - [AXME](https://github.com/AxmeAI/axme) - project overview
-- [AXP Spec](https://github.com/AxmeAI/axme-spec) - open Intent Protocol specification
+- [AXP Spec](https://github.com/AxmeAI/axp-spec) - open Intent Protocol specification
 - [AXME Examples](https://github.com/AxmeAI/axme-examples) - 20+ runnable examples across 5 languages
 - [AXME CLI](https://github.com/AxmeAI/axme-cli) - manage intents, agents, scenarios from the terminal
 - [Async Human Approval for AI Agents](https://github.com/AxmeAI/async-human-approval-for-ai-agents) - async approval with reminders

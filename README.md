@@ -5,7 +5,7 @@ AI agents crash. State gets lost. AXME makes every agent operation durable by de
 Your agent crashes at step 47 of 50. LangGraph: write checkpoint code, configure PostgresSaver, manage state manually. CrewAI: start over from step 1. AXME: restart the agent. It picks up at step 47 automatically.
 
 > **Alpha** - Built with [AXME](https://github.com/AxmeAI/axme) (AXP Intent Protocol).
-> [cloud.axme.ai](https://cloud.axme.ai) - [hello@axme.ai](mailto:hello@axme.ai)
+> [cloud.axme.ai](https://cloud.axme.ai) - [contact@axme.ai](mailto:contact@axme.ai)
 
 ---
 
